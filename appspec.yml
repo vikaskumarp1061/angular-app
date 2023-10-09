@@ -1,0 +1,17 @@
+---
+version: 0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html
+    overwrite: true
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+hooks:
+  AfterInstall:
+    - location: scripts/start.sh
+      timeout: 300
+      run as: root

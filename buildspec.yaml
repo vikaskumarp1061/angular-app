@@ -1,27 +1,20 @@
-version: 0.1
-
+---
+version: 0.2
 phases:
   install:
+    runtime-versions:
+      nodejs: 18
     commands:
-      - echo installing nodejs...
-      - curl -sL https://deb.nodesource.com/setup_14.x | bash -
-      - apt-get install -y nodejs  #aws code build use ubuntu environement
-  pre_build:
-    commands:
-      - echo installing dependencies...
-      - npm i -g @angular/cli
       - npm install
   build:
     commands:
-      # - echo testing...
-      # - echo building...
-      - ng build --prod
-  post_build:
-    commands:
-      - mv appspec.yml ./dist/my-dream-app
-      - mv scripts ./dist/my-dream-app
+      - ng build
+      - pwd
+      - ls -al
 artifacts:
   files:
-    - "**/*"
-  discard-paths: no
-  base-directory: dist/my-dream-app
+    - public/**/*
+    - src/**/*
+    - package.json
+    - appspec.yml
+    - dist/**/*
