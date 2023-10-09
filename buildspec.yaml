@@ -3,12 +3,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18
+      nodejs: 20
     commands:
       - npm install
   build:
     commands:
-      - ng run build
+      - ng build
       - pwd
       - ls -al
 artifacts:
