@@ -6,7 +6,7 @@ phases:
       nodejs: 18
     commands:
       - npm install
-    build:
+  build:
     commands:
       - ng build
       - pwd
