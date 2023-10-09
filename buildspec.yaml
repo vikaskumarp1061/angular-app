@@ -4,10 +4,10 @@ phases:
   install:
     runtime-versions:
       nodejs: 18
-    commands: null
-  build:
     commands:
       - npm install
+    build:
+    commands:
       - ng build
       - pwd
       - ls -al
