@@ -8,7 +8,7 @@ phases:
       - npm install
   build:
     commands:
-      - ng build
+      - ng run build
       - pwd
       - ls -al
 artifacts:
