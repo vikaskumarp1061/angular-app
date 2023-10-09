@@ -8,7 +8,7 @@ phases:
       - npm install
   build:
     commands:
-      - /home/ubuntu/.nvm/versions/node/v18.18.0/bin/ng build
+      - ng build
       - pwd
       - ls -al
 artifacts:
