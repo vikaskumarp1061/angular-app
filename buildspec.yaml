@@ -16,4 +16,3 @@ artifacts:
     - src/**/*
     - package.json
     - appspec.yml
-    - dist/**/*
