@@ -7,6 +7,7 @@ phases:
       - npm install
   build:
     commands:
+      - echo $CODEBUILD_SRC_DIR
       - |
         if [ "$CODEBUILD_SOURCE_REPO_URL" == "https://github.com/vikaskumarp1061/angular-app.git" ]; then
           pwd
