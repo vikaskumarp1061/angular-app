@@ -3,7 +3,7 @@ version: 0
 os: linux
 files:
   - source: /
-    destination: /opt
+    destination: /opt/angular
     overwrite: true
 permissions:
   - object: /
